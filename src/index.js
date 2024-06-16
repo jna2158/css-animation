@@ -8,6 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <App />
+    <App />
+    <Text> 지원이 옷 잘 어울려!</Text>
   </React.StrictMode>
 );
 
