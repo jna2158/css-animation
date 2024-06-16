@@ -7,8 +7,8 @@ const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg)
 
 function App() {
   const [boxLeft, setBoxLeft] = useState([
-    { item: "1번째", left: "0%"},
-    { item: "2번째", left: "0%"},
+    { item: "1번째", left: "0%" },
+    { item: "2번째", left: "0%" },
   ]);
 
   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
@@ -16,9 +16,9 @@ function App() {
   const handleClickBox = (idx) => {
     setBoxLeft((prevBoxLeft) => {
       const updatedBoxLeft = JSON.parse(JSON.stringify(prevBoxLeft));
-  
+
       if (updatedBoxLeft[idx].left === "0%") {
-        updatedBoxLeft[idx].left = '100%';
+        updatedBoxLeft[idx].left = '80%';
       } else {
         updatedBoxLeft[idx].left = '0%';
       }
@@ -35,12 +35,12 @@ function App() {
       }}
     >
       <LeftSide>
-      {
-        boxLeft.map((value, idx) => {
-          return <LeftBox idx={idx + 1} box={value.left} onClick={() => handleClickBox(idx)} key={idx}>{value.item}</LeftBox>
-        })
-      }
-    </LeftSide>
+        {
+          boxLeft.map((value, idx) => {
+            return <LeftBox idx={idx + 1} box={value.left} onClick={() => handleClickBox(idx)} key={idx}>{value.item}</LeftBox>
+          })
+        }
+      </LeftSide>
     </animated.div>
   );
 }
