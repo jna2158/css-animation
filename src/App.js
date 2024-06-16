@@ -8,7 +8,7 @@ const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg)
 function App() {
   const [boxLeft, setBoxLeft] = useState([
     { item: "1번째", left: "0%" },
-    { item: "2번째", left: "0%" },
+    { item: "2번째 지원이가 최고로 예뻐요!", left: "0%" },
   ]);
 
   const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
