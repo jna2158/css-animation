@@ -18,7 +18,7 @@ function App() {
       const updatedBoxLeft = JSON.parse(JSON.stringify(prevBoxLeft));
 
       if (updatedBoxLeft[idx].left === "0%") {
-        updatedBoxLeft[idx].left = '80%';
+        updatedBoxLeft[idx].left = '100%';
       } else {
         updatedBoxLeft[idx].left = '0%';
       }
